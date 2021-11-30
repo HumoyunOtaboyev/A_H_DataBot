@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 bot=Bot(API_TOKEN)
 dp=Dispatcher(bot)
 
-@dp.message_handler(commands=['start'])
+@dp.message_handler(commands=['start',"help"])
 async def boshlash(message: types.Message):
     user=message.from_user.first_name
     await message.reply(f'Assalomu alaykum {user}', reply_markup=menu)
